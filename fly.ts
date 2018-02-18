@@ -1,7 +1,9 @@
 const magik = magikcraft.io;
-con
+
 function fly(){
-    let name = magik.
-    magik.dixit("fly");
-    magik.volare();
+    const location = magik.hic();
+    const nearbyEntities = location.getWorld().getNearbyEntities(location, 8, 8, 8);
+    nearbyEntities.forEach(function(entity){
+        magik.dixit(entity.getName());
+    });
 }
